@@ -69,7 +69,7 @@ function SignUp() {
           <div className="passwordInputDiv">
             <input type={showPassword ? 'text' : 'password'} className='passwordInput' placeholder="Password" id='password' value={password} onChange={onChangeHandle}/>
 
-            <img src={visibilityIcon} alt="show password" srcset="" className="showPassword"  onMouseDown={()=> setShowPassword(true)} onMouseUp={()=>setShowPassword(false)}/>
+            <img src={visibilityIcon} alt="show password" srcset="" className="showPassword" onClick={()=>  showPassword ? setShowPassword(false) : setShowPassword(true)}/>
           </div>
 
           <Link to='/forgotPassword' className="forgotPasswordLink">
